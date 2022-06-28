@@ -1,0 +1,27 @@
+{% extends "App/main_template.html" %}
+
+{% load static %}
+
+{% block mainContent %}
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h4>
+                    Resultado para -> <b>{{nombre}}</b>
+                </h4>
+                {% if estudiante %}
+                    <ul class="list-group">
+                        {% for estudiante_resp in estudiante %}
+                            <li class="list-group-item list-group-item-secondary">{{estudiante_resp.nombre}} - {{estudiante_resp.apellido}} - {{estudiante_resp.email}}</li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <div class="text-danger"><b>Búsqueda sin resultado</b></div>
+                {% endif %}
+                <a href="{% url 'Estudiantes' %}" class="btn btn-primary my-2" role="button">Volver a Estudiantes</a>
+                <br>
+                <a href="{% url 'EstudianteBusqueda' %}" class="btn btn-primary my-2" role="button">Volver a Buscar</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

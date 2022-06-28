@@ -3,5 +3,20 @@
 {% load static %}
 
 {% block mainContent %}
-    profesores
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <p class="h5">
+                    Opciones para Profesores
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <a href="{% url 'ProfesorFormulario' %}" class="btn btn-primary my-2" role="button">Registrar Profesores</a>
+                <br>
+                <a href="{% url 'ProfesorBusqueda' %}" class="btn btn-primary my-2" role="button">Buscar</a>
+            </div>
+        </div>
+    </div>
 {% endblock %}

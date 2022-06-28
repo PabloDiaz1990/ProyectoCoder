@@ -1,0 +1,28 @@
+{% extends "App/main_template.html" %}
+
+{% load static %}
+
+{% block mainContent %}
+    {% if form.errors %}
+        <p class="text-danger">Datos mal ingresados, favor revisar</p>
+    {% endif %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h4>
+                    Formulario Profesores
+                </h4>
+                <p>
+                <form action="" method="POST">{% csrf_token %}
+                    <table class="table table-bordered border-primary table-sm table-responsive">
+                        {{form.as_table}}
+                    </table>
+                    <p>
+                    <input type="submit" class="btn btn-primary" value="Enviar">
+                    <a href="{% url 'Profesores' %}" class="btn btn-primary my-2" role="button">Volver a Profesores</a>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

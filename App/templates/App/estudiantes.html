@@ -3,5 +3,20 @@
 {% load static %}
 
 {% block mainContent %}
-    estudiantes
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <p class="h5">
+                    Opciones para Estudiantes
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <a href="{% url 'EstudianteFormulario' %}" class="btn btn-primary my-2" role="button">Registrar Estudiantes</a>
+                <br>
+                <a href="{% url 'EstudianteBusqueda' %}" class="btn btn-primary my-2" role="button">Buscar</a>
+            </div>
+        </div>
+    </div>
 {% endblock %}
