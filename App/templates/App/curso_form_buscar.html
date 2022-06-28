@@ -1,0 +1,22 @@
+{% extends "App/main_template.html" %}
+
+{% load static %}
+
+{% block mainContent %}
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h4>
+                    Búsqueda Cursos por número
+                </h4>
+                <p>
+                <form action="/App/cursoBuscar" method="GET">
+                    <input type="number" name="num_curso" id="num_curso" class="form-group">
+                    <p>
+                    <input type="submit" class="btn btn-primary" value="Buscar">
+                    <a href="{% url 'Cursos' %}" class="btn btn-primary my-2" role="button">Volver a Cursos</a>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

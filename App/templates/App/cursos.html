@@ -3,7 +3,20 @@
 {% load static %}
 
 {% block mainContent %}
-    <div>
-        <h1>Cursos</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <p class="h5">
+                    Opciones para Cursos
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <a href="{% url 'CursoFormulario' %}" class="btn btn-primary my-2" role="button">Registrar Cursos</a>
+                <br>
+                <a href="{% url 'CursoBusqueda' %}" class="btn btn-primary my-2" role="button">Buscar</a>
+            </div>
+        </div>
     </div>
 {% endblock %}
